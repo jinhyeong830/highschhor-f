@@ -8,20 +8,45 @@
       html {
         font-size: 20px;
       }
+      body {
+        margin: 0;
+      }
+
+      h1 {
+        text-align: center;
+      }
+      ol {
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* align-items: center; */
+        border: 1px solid blue;
+      }
       ol > li {
         font-weight: 700;
+        margin-top: 10px;
       }
 
       ul > li {
         font-weight: 400;
       }
+      span.spotlight {
+        color: salmon;
+      }
+      p.comment {
+        color: #999;
+        font-size: 0.8rem;
+      }
+
+      footer {
+        background-color: #999;
+        height: 100px;
+      }
     </style>
   </head>
   <body>
     <h1>회비 규칙 정하기</h1>
-    <h2>모임이름:</h2>
-    <p>후보: 311 비빔밥</p>
-    <p>아래 규칙 2025년 2월 1일부터 적용</p>
+    <h2>모임이름:<span class="spotlight"> 차카니들</span></h2>
+    <p class="comment">아래 규칙 2025년 2월 1일부터 적용</p>
     <ol>
       <li>회비 2만원</li>
       <li>
@@ -42,10 +67,11 @@
       <li>
         결혼 축하금 50만원
         <ul>
-          <li>주는 시점: 결혼식날 봉투투</li>
-          <li>재혼시 축하금 없음</li>
+          <li>주는 시점: 결혼식날 봉투에 모임이름 작성후 축의금으로</li>
+          <li>재혼시 결혼 축하금 없음</li>
         </ul>
       </li>
     </ol>
+    <footer></footer>
   </body>
 </html>

@@ -49,6 +49,8 @@ ol {
 /* main */
 main {
   padding: 16px 8px 0;
+  max-width: var(--main-width);
+  margin: 0 auto;
   min-height: calc(100vh - var(--footer-height));
 }
 
@@ -142,6 +144,44 @@ p.comment {
   color: #999;
   font-size: 0.8rem;
 }
+
+main .main-section {
+  display: flex;
+}
+
+main .main-section > ol{
+  flex-basis: 50%;
+}
+
+main .main-section > .etc-contents{
+  flex-basis: 30%;
+  text-align: center;
+  background-image: url('../assets/etc-bg.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 10px;
+  font-size: 14px;
+}
+main .main-section > .etc-contents > h4{
+  margin-bottom: .5rem;
+  font-size: 18px;
+  position: relative;
+  top: 70px;
+  
+}
+
+main .main-section > .etc-contents > ul{
+  position: relative;
+  top: 68px;
+}
+
+main .main-section > .etc-contents > ul > li{
+  margin:9px 0;
+  padding: 0;
+}
+
+
 .gap-height {
   height: 110px;
 }
@@ -178,6 +218,21 @@ footer .member-container p a {
 }
 footer .member-container p a i {
 }
+
+/* 반응형 */
+
+@media screen and (max-width: 1080px) {
+  main .main-section {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  main .main-section .etc-contents {
+    margin-top: 50px;
+    min-height: 386px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   html {
     font-size: 16px;
@@ -190,3 +245,30 @@ footer .member-container p a i {
     height: var(--footer-mobile-height);
   }
 }
+
+@media screen and (max-width: 355px) {
+
+  main .main-section > .etc-contents{
+  font-size: 12px;
+}
+
+  main .main-section > .etc-contents > h4{
+  margin-bottom: .5rem;
+  font-size: 18px;
+  position: relative;
+  top: 75px;
+  
+}
+
+main .main-section > .etc-contents > ul{
+  position: relative;
+  top: 81px;
+}
+
+main .main-section > .etc-contents > ul > li{
+  margin:9px 0;
+  padding: 0;
+}
+}
+
+
